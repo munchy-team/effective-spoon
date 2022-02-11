@@ -20,11 +20,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 from uploader import views
 urlpatterns = [
-    re_path(r'^$', views.main, name='main'),
+   # re_path(r'^$', views.main, name='main'),
     re_path(r'^uploader2/$', views.main, name='main'),
     #url(r'/^$', views.main, name='main'),
     re_path(r'^uploader/media/$', views.simple_upload, name='simple_upload'),
     path('admin/', admin.site.urls),
+    path(' ', admin.site.urls),
 ]
 
 if settings.DEBUG:
